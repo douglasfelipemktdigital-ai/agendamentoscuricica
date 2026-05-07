@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -1446,123 +1447,37 @@ body::before {
   </div>
   <div class="menu-body">
 
-    <!-- Checklist fim de turno -->
     <div class="menu-section">
       <div class="menu-section-title" style="color:var(--yellow);">✅ Checklist — Fim de Turno</div>
       <div class="rule-card" style="border-color:rgba(255,208,96,0.2);background:linear-gradient(135deg,var(--card),rgba(255,208,96,0.03));">
         <div style="font-size:11px;color:var(--yellow);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;">Antes de sair, confirme:</div>
         <div style="display:flex;flex-direction:column;gap:8px;">
           <div class="rule-text"><span style="font-size:16px;margin-right:8px;">📱</span><span>Verifiquei o Kommo e <strong>todos os leads respondidos</strong> do dia estão registrados</span></div>
-          <div class="rule-text"><span style="font-size:16px;margin-right:8px;">📅</span><span>Contei os <strong>agendamentos confirmados</strong> do dia — incluindo os que ligaram diretamente</span></div>
-          <div class="rule-text"><span style="font-size:16px;margin-right:8px;">🔄</span><span>Registrei os <strong>reagendamentos</strong> — pacientes que desmarcaram e remarcaram</span></div>
-          <div class="rule-text"><span style="font-size:16px;margin-right:8px;">🏥</span><span>Confirmei com a recepção quantos pacientes <strong>compareceram</strong> hoje</span></div>
-          <div class="rule-text"><span style="font-size:16px;margin-right:8px;">💰</span><span>Anotei as <strong>vendas fechadas</strong> — pacientes que assinaram contrato hoje</span></div>
-          <div class="rule-text"><span style="font-size:16px;margin-right:8px;">💾</span><span>Cliquei em <strong>Salvar</strong> — o app não salva automaticamente</span></div>
+          <div class="rule-text"><span style="font-size:16px;margin-right:8px;">📅</span><span>Contei os <strong>agendamentos confirmados</strong> do dia</span></div>
+          <div class="rule-text"><span style="font-size:16px;margin-right:8px;">🔄</span><span>Registrei os <strong>reagendamentos</strong></span></div>
+          <div class="rule-text"><span style="font-size:16px;margin-right:8px;">🏥</span><span>Confirmei com a recepção quantos pacientes <strong>compareceram</strong></span></div>
+          <div class="rule-text"><span style="font-size:16px;margin-right:8px;">💰</span><span>Anotei as <strong>vendas fechadas</strong></span></div>
+          <div class="rule-text"><span style="font-size:16px;margin-right:8px;">💾</span><span>Cliquei em <strong>Salvar</strong></span></div>
         </div>
       </div>
     </div>
 
-    <!-- Regras de preenchimento -->
     <div class="menu-section">
       <div class="menu-section-title">⚠️ Regras de Preenchimento</div>
-      <div class="rule-card"><div class="rule-text"><span class="rule-num">1</span><span>Preencher <strong>ao final do turno</strong>, antes de sair da clínica — nunca de memória no dia seguinte.</span></div></div>
-      <div class="rule-card"><div class="rule-text"><span class="rule-num">2</span><span>Os números são <strong>acumulativos do dia todo</strong> — some manhã + tarde, não só o último turno.</span></div></div>
-      <div class="rule-card"><div class="rule-text"><span class="rule-num">3</span><span>Agendamento só conta se a <strong>data e horário foram confirmados</strong> com o paciente.</span></div></div>
-      <div class="rule-card"><div class="rule-text"><span class="rule-num">4</span><span>Comparecimento só conta se o paciente <strong>chegou fisicamente à clínica</strong> — não vale só confirmar.</span></div></div>
-      <div class="rule-card"><div class="rule-text"><span class="rule-num">5</span><span>Venda só conta se o paciente <strong>assinou ou pagou</strong> — interesse não é venda.</span></div></div>
-      <div class="rule-card"><div class="rule-text"><span class="rule-num">6</span><span>Esqueceu um dia? Use a aba <strong>Histórico</strong> para preencher retroativamente — até 30 dias.</span></div></div>
-      <div class="rule-card"><div class="rule-text"><span class="rule-num">7</span><span>Dúvida no número? <strong>Consulte o Kommo</strong> antes de salvar — dado errado prejudica toda a análise.</span></div></div>
-      <div class="rule-card" style="border-color:rgba(79,156,249,0.2);"><div class="rule-text"><span class="rule-num" style="background:rgba(79,156,249,0.15);">⚡</span><span><strong>Leads são automáticos</strong> via Kommo — nunca altere esse número manualmente.</span></div></div>
+      <div class="rule-card"><div class="rule-text"><span class="rule-num">1</span><span>Preencher <strong>ao final do turno</strong>, antes de sair da clínica.</span></div></div>
+      <div class="rule-card"><div class="rule-text"><span class="rule-num">2</span><span>Os números são <strong>acumulativos do dia todo</strong>.</span></div></div>
+      <div class="rule-card"><div class="rule-text"><span class="rule-num">3</span><span>Agendamento só conta se a <strong>data e horário foram confirmados</strong>.</span></div></div>
+      <div class="rule-card"><div class="rule-text"><span class="rule-num">4</span><span>Comparecimento só conta se o paciente <strong>chegou fisicamente</strong>.</span></div></div>
+      <div class="rule-card"><div class="rule-text"><span class="rule-num">5</span><span>Venda só conta se o paciente <strong>assinou ou pagou</strong>.</span></div></div>
+      <div class="rule-card"><div class="rule-text"><span class="rule-num">6</span><span>Esqueceu? Use a aba <strong>Histórico</strong> para preencher retroativamente.</span></div></div>
     </div>
 
-    <!-- Definições das métricas -->
-    <div class="menu-section">
-      <div class="menu-section-title">📊 O que é cada métrica?</div>
-      <div class="rule-card">
-        <div class="metric-def">
-          <div class="metric-def-icon" style="background:rgba(79,156,249,0.1);">⚡</div>
-          <div class="metric-def-info">
-            <div class="metric-def-name">Novos Leads</div>
-            <div class="metric-def-desc">Contatos que chegaram pelo tráfego pago (Meta/Google) e entraram no Kommo. <strong>Automático.</strong></div>
-          </div>
-          <span class="meta-badge" style="background:rgba(79,156,249,0.1);color:var(--v);">Auto</span>
-        </div>
-        <div class="metric-def">
-          <div class="metric-def-icon" style="background:rgba(16,217,138,0.1);">📅</div>
-          <div class="metric-def-info">
-            <div class="metric-def-name">Agendamentos</div>
-            <div class="metric-def-desc">Consultas com data e hora marcadas. Conta mesmo se for para dias futuros — o que importa é <strong>quando foi marcado</strong>, não quando vai acontecer.</div>
-          </div>
-          <span class="meta-badge">≥ 30%</span>
-        </div>
-        <div class="metric-def">
-          <div class="metric-def-icon" style="background:rgba(255,208,96,0.1);">🔄</div>
-          <div class="metric-def-info">
-            <div class="metric-def-name">Reagendamentos</div>
-            <div class="metric-def-desc">Paciente que já tinha consulta marcada, desmarcou e <strong>remarcou no mesmo contato</strong>. Não conta quem só desmarcou.</div>
-          </div>
-        </div>
-        <div class="metric-def">
-          <div class="metric-def-icon" style="background:rgba(160,96,240,0.1);">🏥</div>
-          <div class="metric-def-info">
-            <div class="metric-def-name">Comparecimentos</div>
-            <div class="metric-def-desc">Pacientes que <strong>apareceram fisicamente</strong> na clínica hoje — confirme com a recepção no fim do dia.</div>
-          </div>
-          <span class="meta-badge">≥ 40%</span>
-        </div>
-        <div class="metric-def">
-          <div class="metric-def-icon" style="background:rgba(255,84,112,0.1);">💰</div>
-          <div class="metric-def-info">
-            <div class="metric-def-name">Vendas</div>
-            <div class="metric-def-desc">Pacientes que <strong>fecharam o tratamento</strong> hoje — assinaram ou realizaram o pagamento.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Erros comuns -->
-    <div class="menu-section">
-      <div class="menu-section-title" style="color:var(--red);">🚫 Erros Comuns — Evite!</div>
-      <div class="rule-card" style="border-color:rgba(255,84,112,0.15);">
-        <div style="display:flex;flex-direction:column;gap:8px;">
-          <div class="rule-text"><span style="color:var(--red);margin-right:8px;font-weight:800;">✗</span><span>Preencher "de cabeça" no dia seguinte sem consultar o Kommo</span></div>
-          <div class="rule-text"><span style="color:var(--red);margin-right:8px;font-weight:800;">✗</span><span>Contar como comparecimento paciente que <strong>confirmou mas não apareceu</strong></span></div>
-          <div class="rule-text"><span style="color:var(--red);margin-right:8px;font-weight:800;">✗</span><span>Contar como venda paciente que "ficou de pensar" ou "vai confirmar amanhã"</span></div>
-          <div class="rule-text"><span style="color:var(--red);margin-right:8px;font-weight:800;">✗</span><span>Esquecer de salvar — o botão <strong>Salvar</strong> é obrigatório</span></div>
-          <div class="rule-text"><span style="color:var(--red);margin-right:8px;font-weight:800;">✗</span><span>Alterar o número de Leads manualmente — ele é automático</span></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Atenção Jully -->
     <div class="menu-section">
       <div class="menu-section-title" style="color:var(--ju);">🟣 Atenção: Jully</div>
       <div class="rule-card" style="border-color:rgba(160,96,240,0.2);">
         <div class="rule-text" style="flex-direction:column;gap:6px;">
-          <span>Jully <strong>não recebe leads do tráfego pago</strong> — por isso não tem a métrica de Novos Leads.</span>
-          <span style="margin-top:4px;">Preenche apenas: <strong>Agendamentos, Reagendamentos, Comparecimentos e Vendas.</strong></span>
-          <span style="margin-top:4px;font-size:11px;color:var(--muted);">Os pacientes da Jully vêm de outras origens (indicação, base antiga, etc).</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Metas -->
-    <div class="menu-section">
-      <div class="menu-section-title" style="color:var(--green);">🎯 Metas do Mês</div>
-      <div class="rule-card">
-        <div style="display:flex;flex-direction:column;gap:8px;">
-          <div class="status-row s-ok" style="margin:0;justify-content:space-between;">
-            <span>Agend / Lead</span>
-            <span style="font-weight:800;">≥ 30%</span>
-          </div>
-          <div class="status-row s-ok" style="margin:0;justify-content:space-between;">
-            <span>Comp / Agend</span>
-            <span style="font-weight:800;">≥ 40%</span>
-          </div>
-        </div>
-        <div style="margin-top:10px;font-size:11px;color:var(--muted);line-height:1.6;">
-          Exemplo: se você teve 10 leads e marcou 4 consultas → 40% de agend/lead ✓<br>
-          Se 4 foram agendados e 2 compareceram → 50% de comp/agend ✓
+          <span>Jully <strong>não recebe leads do tráfego pago</strong>.</span>
+          <span>Preenche apenas: <strong>Agendamentos, Reagendamentos, Comparecimentos e Vendas.</strong></span>
         </div>
       </div>
     </div>
@@ -1578,7 +1493,6 @@ body::before {
 import{initializeApp,getApps}from'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
 import{getFirestore,doc,setDoc,getDoc,writeBatch}from'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js';
 
-// ── Firebase config embutida (sem necessidade de configurar manualmente) ──
 const FB_CFG = {
   apiKey: "AIzaSyBE_DUL36J6HWgYSUKkUTsppgVAh5wSXw4",
   authDomain: "curicica-agendamentos-mensal.firebaseapp.com",
@@ -1646,7 +1560,6 @@ const dInM=new Date(now.getFullYear(),now.getMonth()+1,0).getDate();
 const MONTH_SUMMARY_KEY=`summary_${mKey}`;
 let CUR={},vals={},editDay=null,editVals={},adminCtx={};
 
-// Check Jully hours
 function checkJullyHours(){
   const h=now.getHours();
   const isComercial=h>=8&&h<18;
@@ -1675,11 +1588,8 @@ function sKey(sdr){return`${sdr}_${MONTH_SUMMARY_KEY}`;}
 function rgb(c){return c==='v'?'79,142,247':c==='jq'?'16,217,138':'160,96,240';}
 
 async function dbSet(sdr,day,data,metrics){
-  // Salva localStorage imediatamente
   const lk='loc_'+dKey(sdr,day);
   localStorage.setItem(lk,JSON.stringify(data));
-
-  // Atualiza summary local
   const sumKey='loc_'+sKey(sdr);
   let summary={};
   try{const r=localStorage.getItem(sumKey);if(r)summary=JSON.parse(r);}catch{}
@@ -1690,15 +1600,12 @@ async function dbSet(sdr,day,data,metrics){
   });
   localStorage.setItem(lk+'.old',JSON.stringify(data));
   localStorage.setItem(sumKey,JSON.stringify(summary));
-
-  // Salva no Firebase
   if(db){
     try{
       const batch=writeBatch(db);
       batch.set(doc(db,'sdr_tracker',dKey(sdr,day)),data);
       batch.set(doc(db,'sdr_summary',sKey(sdr)),summary,{merge:true});
       await batch.commit();
-      console.log('Firebase salvo com sucesso:', dKey(sdr,day));
     }catch(e){
       console.error('Firebase write error:', e);
       showToast('Salvo localmente — Firebase indisponível','err');
@@ -1708,7 +1615,6 @@ async function dbSet(sdr,day,data,metrics){
 }
 
 async function dbGet(sdr,day){
-  // Sempre tenta Firebase primeiro
   if(db){
     try{
       const s=await getDoc(doc(db,'sdr_tracker',dKey(sdr,day)));
@@ -1717,7 +1623,6 @@ async function dbGet(sdr,day){
         localStorage.setItem('loc_'+dKey(sdr,day),JSON.stringify(d));
         return d;
       } else {
-        // Documento não existe no Firebase — limpa cache local também
         localStorage.removeItem('loc_'+dKey(sdr,day));
         return null;
       }
@@ -1725,7 +1630,6 @@ async function dbGet(sdr,day){
       console.warn('Firebase read error, usando cache local:',e);
     }
   }
-  // Fallback localStorage
   const r=localStorage.getItem('loc_'+dKey(sdr,day));
   return r?JSON.parse(r):null;
 }
@@ -1789,7 +1693,6 @@ async function loadHomeResumo(){
     if(ps){ps.style.display='inline-flex';ps.textContent=ok?'✓ OK':'Pendente';ps.style.background=ok?'var(--green-dim)':'var(--red-dim)';ps.style.color=ok?'var(--green)':'var(--red)';}
   }
 
-  // Alerta só para o DIA ANTERIOR (ontem) sem preenchimento
   const alertArea=document.getElementById('alert-area');
   const yesterday = todayN - 1;
   if(yesterday >= 1){
@@ -1818,7 +1721,6 @@ window.openSDR=async function(name,ini,col,jully){
   document.getElementById('sdr-date-top').textContent=now.toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long'}).toUpperCase();
   const av=document.getElementById('sdr-av-top');
   av.textContent=ini;av.style.background=`rgba(${rgb(col)},0.12)`;av.style.color=`var(--${col})`;
-  // Color save btn
   const btn=document.getElementById('save-btn');
   btn.className='save-btn'+(col==='jq'?' jq-color':col==='ju'?' ju-color':'');
   goTo('s-sdr');tab('hoje');
@@ -1893,6 +1795,7 @@ window.saveDay=async function(){
   await dbSet(CUR.name,todayN,{...vals},CUR.metrics);
   btn.classList.remove('loading');btn.classList.add('saved');btn.textContent='✓ Salvo!';
   showToast('Dados salvos!','ok');
+  await loadPublicStatus();
   if(isAuth)await loadHomeResumo();
   setTimeout(()=>{btn.classList.remove('saved');btn.textContent='Salvar';},3000);
 };
@@ -1913,7 +1816,6 @@ async function renderMes(){
   const colHex=col==='v'?'#4f9cf9':col==='jq'?'#10d98a':'#a060f0';
   const colRgb=col==='v'?'79,156,249':col==='jq'?'16,217,138':'160,96,240';
 
-  // Collect daily data for sparkline
   const dailyData=[];
   for(let d=1;d<=todayN;d++){
     const day=await dbGet(CUR.name,d);
@@ -1925,7 +1827,6 @@ async function renderMes(){
   const convCA=agend>0?Math.round(comp/agend*100):0;
   const convVA=agend>0?Math.round(vend/agend*100):0;
 
-  // Build sparkline SVG
   function sparkline(data,key,w=300,h=52){
     const vals=data.map(d=>d[key]);
     const max=Math.max(...vals,1);
@@ -1947,7 +1848,6 @@ async function renderMes(){
     </svg>`;
   }
 
-  // Funnel bar
   function funnelBar(val,max,color,label,pct,meta){
     const w=max>0?Math.round((val/max)*100):0;
     const okColor=pct>=meta?'var(--green)':'var(--red)';
@@ -1965,7 +1865,6 @@ async function renderMes(){
     </div>`;
   }
 
-  // Ring chart SVG
   function ringChart(pct,color,size=80){
     const r=32,circ=2*Math.PI*r;
     const dash=Math.min(pct/100,1)*circ;
@@ -1979,8 +1878,6 @@ async function renderMes(){
   }
 
   let h=`<div style="height:4px;"></div>`;
-
-  // Hero KPIs
   h+=`<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;">
     ${!CUR.jully?`<div class="dash-block" style="padding:16px;border-left:3px solid ${colHex};">
       <div class="slbl">Leads do mês</div>
@@ -1998,7 +1895,6 @@ async function renderMes(){
     </div>
   </div>`;
 
-  // Conversion rings
   h+=`<div class="dash-block" style="margin-bottom:10px;">
     <div class="slbl" style="margin-bottom:14px;">Taxa de Conversão</div>
     <div style="display:flex;justify-content:space-around;align-items:center;">
@@ -2020,7 +1916,6 @@ async function renderMes(){
     </div>
   </div>`;
 
-  // Funil
   h+=`<div class="dash-block" style="margin-bottom:10px;">
     <div class="slbl" style="margin-bottom:14px;">Funil do Mês</div>
     ${!CUR.jully?funnelBar(leads,leads,'var(--v)','Leads',null,null):''}
@@ -2030,7 +1925,6 @@ async function renderMes(){
     ${funnelBar(vend,comp||1,'var(--yellow)','Vendas',convVA,null)}
   </div>`;
 
-  // Gráfico de barras diário
   if(dailyData.length>0){
     const maxVal=Math.max(...dailyData.map(d=>Math.max(d.agend,d.comp,d.vend)),1);
     const barW=Math.floor(280/dailyData.length)-2;
@@ -2121,6 +2015,7 @@ window.saveEditDay=async function(){
   await dbSet(CUR.name,editDay,{...editVals},CUR.metrics);
   btn.classList.remove('loading');btn.classList.add('saved');btn.textContent='✓ Salvo!';
   showToast('Dados salvos!','ok');
+  await loadPublicStatus();
   if(isAuth)await loadHomeResumo();
   setTimeout(()=>{btn.classList.remove('saved');btn.textContent='Salvar alterações';goTo('s-sdr');tab('hist');},2000);
 };
@@ -2164,11 +2059,9 @@ async function renderDashHoje(c){
     sdrData.push(row);
   }
 
-  // Alert
   if(pending.length>0){h+=`<div class="alert-banner"><div class="alert-icon">⚠️</div><div><div class="alert-text">Preenchimento pendente!</div><div class="alert-names">${pending.join(', ')} ainda não preencheram</div></div></div>`;}
   else{h+=`<div class="alert-banner ok"><div class="alert-icon">✅</div><div class="alert-text">Todas as SDRs preencheram hoje!</div></div>`;}
 
-  // Grand total cards
   h+=`<div class="dash-block" style="margin-bottom:10px;">
     <div class="slbl" style="margin-bottom:12px;">Total Geral Hoje</div>
     <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px;">
@@ -2180,7 +2073,6 @@ async function renderDashHoje(c){
     </div>
   </div>`;
 
-  // Conversão geral
   const gAL=grand.leads>0?Math.round(grand.agend/grand.leads*100):0;
   const gCA=grand.agend>0?Math.round(grand.comp/grand.agend*100):0;
   const gVA=grand.agend>0?Math.round(grand.vend/grand.agend*100):0;
@@ -2193,7 +2085,6 @@ async function renderDashHoje(c){
     </div>
   </div>`;
 
-  // Por SDR
   for(const s of sdrData){
     const colHex=s.col==='v'?'#4f9cf9':s.col==='jq'?'#10d98a':'#a060f0';
     const colRgb=s.col==='v'?'79,156,249':s.col==='jq'?'16,217,138':'160,96,240';
@@ -2209,7 +2100,6 @@ async function renderDashHoje(c){
         <span class="badge" style="background:${s.ok?'var(--green-dim)':'var(--red-dim)'};color:${s.ok?'var(--green)':'var(--red)'};">${s.ok?'OK':'—'}</span>
       </div>`;
     if(s.today){
-      // Mini funil horizontal
       const metrics=[
         {k:'leads',l:'Leads',show:!s.jully},
         {k:'agend',l:'Agend',show:true},
@@ -2231,12 +2121,6 @@ async function renderDashHoje(c){
         </div>`;
       });
       h+=`</div>`;
-      if(!s.jully&&s.vals.leads>0||s.vals.agend>0){
-        h+=`<div style="display:flex;gap:6px;margin-top:10px;">`;
-        if(!s.jully&&s.vals.leads>0)h+=`<div style="flex:1;padding:6px;background:${al>=30?'var(--green-dim)':'var(--red-dim)'};border-radius:8px;text-align:center;"><div style="font-size:9px;color:var(--muted);">Agend/Lead</div><div style="font-size:13px;font-weight:800;color:${al>=30?'var(--green)':'var(--red)'};">${al}%</div></div>`;
-        if(s.vals.agend>0)h+=`<div style="flex:1;padding:6px;background:${ca>=40?'var(--green-dim)':'var(--red-dim)'};border-radius:8px;text-align:center;"><div style="font-size:9px;color:var(--muted);">Comp/Agend</div><div style="font-size:13px;font-weight:800;color:${ca>=40?'var(--green)':'var(--red)'};">${ca}%</div></div>`;
-        h+=`</div>`;
-      }
     }else{
       h+=`<div style="font-size:13px;color:var(--muted);text-align:center;padding:12px 0;">Sem dados hoje</div>`;
     }
@@ -2248,8 +2132,6 @@ async function renderDashHoje(c){
 
 async function renderDashMes(c){
   let h='<div style="height:4px;"></div>';
-
-  // Collect all daily data for chart
   const allDaily={};
   for(const s of SDRS){
     allDaily[s.name]=[];
@@ -2258,17 +2140,13 @@ async function renderDashMes(c){
       allDaily[s.name].push({d,leads:day?.leads||0,agend:day?.agend||0,comp:day?.comp||0,vend:day?.vend||0});
     }
   }
-
-  // Grand total month
   const summaries={};
   for(const s of SDRS) summaries[s.name]=await getMonthSummary(s.name);
   const grand={leads:0,agend:0,reag:0,comp:0,vend:0};
   SDRS.forEach(s=>s.metrics.forEach(m=>{grand[m.key]=(grand[m.key]||0)+(summaries[s.name][m.key]||0);}));
-
   const gAL=grand.leads>0?Math.round(grand.agend/grand.leads*100):0;
   const gCA=grand.agend>0?Math.round(grand.comp/grand.agend*100):0;
 
-  // Grand totals
   h+=`<div class="dash-block" style="margin-bottom:10px;">
     <div class="slbl" style="margin-bottom:12px;">Total Consolidado do Mês</div>
     <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:14px;">
@@ -2292,40 +2170,6 @@ async function renderDashMes(c){
     </div>
   </div>`;
 
-  // Gráfico de linha comparativo (agendamentos por SDR ao longo do mês)
-  const maxDay=todayN;
-  const colorsSDR=['#4f9cf9','#10d98a','#a060f0'];
-  const svgH=100,svgW=300;
-  const maxAgend=Math.max(...SDRS.map(s=>Math.max(...allDaily[s.name].map(d=>d.agend))),1);
-  let lines='';
-  SDRS.forEach((s,si)=>{
-    const data=allDaily[s.name];
-    if(data.length<2)return;
-    const pts=data.map((d,i)=>{
-      const x=(i/(data.length-1))*svgW;
-      const y=svgH-4-(d.agend/maxAgend)*(svgH-8);
-      return`${x},${y}`;
-    }).join(' ');
-    lines+=`<polyline points="${pts}" fill="none" stroke="${colorsSDR[si]}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>`;
-    // Last dot
-    const last=data[data.length-1];
-    const lx=svgW;const ly=svgH-4-(last.agend/maxAgend)*(svgH-8);
-    lines+=`<circle cx="${lx}" cy="${ly}" r="3" fill="${colorsSDR[si]}"/>`;
-  });
-  h+=`<div class="dash-block" style="margin-bottom:10px;">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
-      <div class="slbl">Agendamentos por SDR</div>
-      <div style="display:flex;gap:8px;">
-        ${SDRS.map((s,i)=>`<span style="font-size:10px;color:${colorsSDR[i]};">■ ${s.name.slice(0,3)}</span>`).join('')}
-      </div>
-    </div>
-    <svg viewBox="0 0 ${svgW} ${svgH}" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:${svgH}px;">
-      <line x1="0" y1="${svgH}" x2="${svgW}" y2="${svgH}" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
-      ${lines}
-    </svg>
-  </div>`;
-
-  // Por SDR cards
   for(const s of SDRS){
     const sum=summaries[s.name];
     const colHex=s.col==='v'?'#4f9cf9':s.col==='jq'?'#10d98a':'#a060f0';
@@ -2333,8 +2177,6 @@ async function renderDashMes(c){
     const leads=sum.leads||0,agend=sum.agend||0,comp=sum.comp||0,vend=sum.vend||0,reag=sum.reag||0;
     const al=leads>0?Math.round(agend/leads*100):0;
     const ca=agend>0?Math.round(comp/agend*100):0;
-
-    // Mini sparkline vendas
     const vData=allDaily[s.name];
     const vMax=Math.max(...vData.map(d=>d.vend),1);
     const vPts=vData.length>1?vData.map((d,i)=>{
@@ -2366,7 +2208,6 @@ async function renderDashMes(c){
       </div>
     </div>`;
   }
-
   h+=`<div class="footer-sig">CRIADO E MONITORADO POR DOUGLAS FELIPE</div>`;
   c.innerHTML=h;
 }
@@ -2408,12 +2249,12 @@ window.saveAdminEdit=async function(){
   await dbSet(adminCtx.name,adminCtx.day,data,adminCtx.metrics);
   btn.classList.remove('loading');btn.classList.add('saved');btn.textContent='✓ Corrigido!';
   showToast('Dados corrigidos!','ok');
+  await loadPublicStatus();
   if(isAuth)await loadHomeResumo();
   setTimeout(()=>{btn.classList.remove('saved');btn.style.background='var(--red)';btn.textContent='Salvar correção';goTo('s-dash');dtab('edit');},2000);
 };
 
-
-// Efeito luminoso de clique
+// Efeito ripple
 document.addEventListener('click', e => {
   const el = e.target.closest('button, .profile-card, .day-cell:not(.future), .tab-btn');
   if (!el) return;
@@ -2430,7 +2271,6 @@ document.addEventListener('click', e => {
 
 initFB();
 
-// ══════════════════════ MENU ══════════════════════
 window.openMenu=function(){
   document.getElementById('menu-overlay').classList.add('open');
   document.getElementById('menu-sheet').classList.add('open');
@@ -2443,20 +2283,32 @@ window.closeMenu=function(){
 };
 
 // ══════════════════════ STATUS PÚBLICO ══════════════════════
+// Verifica o DIA ANTERIOR — se não preencheu ontem, mostra Pendente
 async function loadPublicStatus(){
   const map=[{sdr:'Paula',id:'pub-v'},{sdr:'Caroline',id:'pub-jq'},{sdr:'Jully',id:'pub-ju'}];
+  const checkDay = todayN > 1 ? todayN - 1 : null;
+
   for(const{sdr,id}of map){
-    const data=await dbGet(sdr,todayN);
     const card=document.getElementById(id);if(!card)continue;
     const lbl=card.querySelector('.pub-stat-lbl');
-    if(data){card.classList.remove('pending');card.classList.add('ok');if(lbl)lbl.textContent='Preencheu ✓';}
-    else{card.classList.remove('ok');card.classList.add('pending');if(lbl)lbl.textContent='Pendente';}
+
+    // Dia 1 do mês: não há ontem — mostra OK por padrão
+    if(!checkDay){
+      card.classList.remove('pending');card.classList.add('ok');
+      if(lbl)lbl.textContent='OK ✓';
+      continue;
+    }
+
+    const data=await dbGet(sdr,checkDay);
+    if(data){
+      card.classList.remove('pending');card.classList.add('ok');
+      if(lbl)lbl.textContent='Preencheu ✓';
+    }else{
+      card.classList.remove('ok');card.classList.add('pending');
+      if(lbl)lbl.textContent='Pendente';
+    }
   }
 }
-
-// Hook save para atualizar status público
-const _origSaveDay=window.saveDay;
-window.saveDay=async function(){await _origSaveDay();await loadPublicStatus();};
 
 loadPublicStatus();
 
@@ -2470,8 +2322,7 @@ function applyTilt(el){
     const r=el.getBoundingClientRect();
     const x=(e.clientX-r.left)/r.width -0.5;
     const y=(e.clientY-r.top)/r.height -0.5;
-    const rx=y*-14, ry=x*14;
-    el.style.transform=`perspective(600px) rotateX(${rx}deg) rotateY(${ry}deg) scale3d(1.04,1.04,1.04)`;
+    el.style.transform=`perspective(600px) rotateX(${y*-14}deg) rotateY(${x*14}deg) scale3d(1.04,1.04,1.04)`;
     shine.style.background=`radial-gradient(circle at ${(x+0.5)*100}% ${(y+0.5)*100}%, rgba(255,255,255,0.12) 0%, transparent 65%)`;
   });
   el.addEventListener('mouseleave',()=>{
