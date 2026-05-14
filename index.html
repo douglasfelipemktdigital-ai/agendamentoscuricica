@@ -2283,7 +2283,13 @@ window.closeMenu=function(){
 // ══════════════════════ STATUS PÚBLICO ══════════════════════
 // Verifica o DIA ANTERIOR — se não preencheu ontem, mostra Pendente
 async function loadPublicStatus(){
-  const map=[{sdr:'Duyane',id:'pub-v'},{sdr:'Caroline',id:'pub-jq'},{sdr:'Jully',id:'pub-ju'}];
+  const map=[{1650
+  2288
+
+              // Dados históricos da planilha
+              const historicalData = {
+                'Caroline':{'2':{leads:0,agend:7,reag:0,comp:1,vend:0},'3':{leads:0,agend:2,reag:0,comp:2,vend:0},'4':{leads:0,agend:4,reag:0,comp:2,vend:0},'5':{leads:0,agend:2,reag:0,comp:2,vend:0},'6':{leads:0,agend:6,reag:0,comp:4,vend:0},'7':{leads:0,agend:1,reag:0,comp:0,vend:0},'8':{leads:0,agend:4,reag:0,comp:1,vend:0},'9':{leads:0,agend:2,reag:0,comp:0,vend:0},'10':{leads:0,agend:1,reag:0,comp:1,vend:0},'11':{leads:0,agend:6,reag:0,comp:1,vend:0},'12':{leads:0,agend:8,reag:0,comp:2,vend:0},'13':{leads:0,agend:4,reag:0,comp:0,vend:0}},'Duyane':{'14':{leads:0,agend:2,reag:0,comp:0,vend:0}}};
+              ,id:'pub-v'},{sdr:'Caroline',id:'pub-jq'},{sdr:'Jully',id:'pub-ju'}];
   const checkDay = todayN > 1 ? todayN - 1 : null;
 
   for(const{sdr,id}of map){
