@@ -1,4 +1,5 @@
-const map=
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -17,8 +18,7 @@ const map=
   --text: #e8edf5;
   --muted: #5a6a85;
   --muted2: #8899b0;
-  --v: #4f9cf9;
-  --jq: #10d98a;
+  --car: #ff8c42;
   --ju: #a060f0;
   --green: #10d98a;
   --green-dim: rgba(16,217,138,0.08);
@@ -47,7 +47,7 @@ body::before {
   top: -200px; left: 50%;
   transform: translateX(-50%);
   width: 800px; height: 500px;
-  background: radial-gradient(ellipse, rgba(79,156,249,0.04) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(255,140,66,0.04) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
@@ -89,8 +89,8 @@ body::before {
   to { transform: rotate(360deg); }
 }
 @keyframes glow-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(79,156,249,0.3); }
-  50%       { box-shadow: 0 0 0 8px rgba(79,156,249,0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,140,66,0.3); }
+  50%       { box-shadow: 0 0 0 8px rgba(255,140,66,0); }
 }
 
 /* ══════════════════════ HOME ══════════════════════ */
@@ -109,14 +109,14 @@ body::before {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(79,156,249,0.1);
-  border: 1px solid rgba(79,156,249,0.2);
+  background: rgba(255,140,66,0.1);
+  border: 1px solid rgba(255,140,66,0.2);
   border-radius: 100px;
   padding: 4px 12px;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.08em;
-  color: var(--v);
+  color: var(--car);
   margin-bottom: 16px;
   text-transform: uppercase;
 }
@@ -125,7 +125,7 @@ body::before {
   content: '';
   width: 6px; height: 6px;
   border-radius: 50%;
-  background: var(--v);
+  background: var(--car);
   animation: glow-pulse 2s infinite;
 }
 
@@ -263,7 +263,6 @@ body::before {
 .profile-card:nth-child(1) { animation-delay: 0.05s; }
 .profile-card:nth-child(2) { animation-delay: 0.1s; }
 .profile-card:nth-child(3) { animation-delay: 0.15s; }
-.profile-card:nth-child(4) { animation-delay: 0.2s; }
 
 .profile-card::before {
   content: '';
@@ -282,29 +281,9 @@ body::before {
 .profile-card:hover::before { opacity: 1; }
 .profile-card:active { transform: scale(0.97); }
 
-.profile-card.v-card:hover  { border-color: rgba(79,156,249,0.3); box-shadow: 0 8px 30px rgba(79,156,249,0.1); }
-.profile-card.jq-card:hover { border-color: rgba(16,217,138,0.3); box-shadow: 0 8px 30px rgba(16,217,138,0.1); }
+.profile-card.car-card:hover { border-color: rgba(255,140,66,0.3); box-shadow: 0 8px 30px rgba(255,140,66,0.1); }
 .profile-card.ju-card:hover { border-color: rgba(160,96,240,0.3); box-shadow: 0 8px 30px rgba(160,96,240,0.1); }
 .profile-card.dash-card:hover { border-color: rgba(255,208,96,0.3); box-shadow: 0 8px 30px rgba(255,208,96,0.1); }
-
-/* ── 3D TILT ── */
-.tilt-3d {
-  transform-style: preserve-3d;
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
-  will-change: transform;
-}
-.tilt-3d .tilt-shine {
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.08) 0%, transparent 70%);
-  opacity: 0;
-  transition: opacity 0.2s;
-  pointer-events: none;
-}
-.tilt-3d:hover .tilt-shine { opacity: 1; }
-.pub-stat-card { position: relative; overflow: hidden; }
-.profile-card  { position: relative; overflow: hidden; }
 
 .avatar {
   width: 44px; height: 44px;
@@ -541,7 +520,7 @@ body::before {
 .mcard-auto {
   margin-top: 10px;
   font-size: 11px;
-  color: var(--v);
+  color: var(--car);
   opacity: 0.8;
   display: flex;
   align-items: center;
@@ -577,7 +556,7 @@ body::before {
   width: 100%;
   padding: 16px;
   border-radius: var(--radius);
-  background: var(--v);
+  background: var(--car);
   border: none;
   color: white;
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -603,15 +582,13 @@ body::before {
   opacity: 0;
 }
 
-.save-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(79,156,249,0.35); }
+.save-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,140,66,0.35); }
 .save-btn:active { transform: scale(0.97); }
 .save-btn:active::before { width: 300px; height: 300px; opacity: 1; }
 
 .save-btn.loading { opacity: 0.7; pointer-events: none; }
 .save-btn.saved { background: var(--green); box-shadow: 0 8px 24px rgba(16,217,138,0.3); }
 
-.save-btn.jq-color { background: var(--jq); }
-.save-btn.jq-color:hover { box-shadow: 0 8px 24px rgba(16,217,138,0.35); }
 .save-btn.ju-color { background: var(--ju); }
 .save-btn.ju-color:hover { box-shadow: 0 8px 24px rgba(160,96,240,0.35); }
 
@@ -665,7 +642,7 @@ body::before {
 
 .day-cell:hover:not(.future) { background: var(--card2); color: var(--text); transform: scale(1.1); }
 .day-cell:active:not(.future) { transform: scale(0.9); }
-.day-cell.today { background: var(--v); color: white; box-shadow: 0 4px 12px rgba(79,156,249,0.4); }
+.day-cell.today { background: var(--car); color: white; box-shadow: 0 4px 12px rgba(255,140,66,0.4); }
 .day-cell.has { background: var(--green-dim); color: var(--green); border: 1px solid rgba(16,217,138,0.2); }
 .day-cell.future { opacity: 0.25; cursor: default; }
 
@@ -811,8 +788,8 @@ body::before {
 }
 
 .cfg-input:focus {
-  border-color: var(--v);
-  box-shadow: 0 0 0 3px rgba(79,156,249,0.1);
+  border-color: var(--car);
+  box-shadow: 0 0 0 3px rgba(255,140,66,0.1);
 }
 
 #cfg-status {
@@ -1110,7 +1087,7 @@ body::before {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 13px;
   font-weight: 700;
-  color: var(--v);
+  color: var(--car);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 12px;
@@ -1133,8 +1110,8 @@ body::before {
   justify-content: center;
   width: 22px; height: 22px;
   border-radius: 7px;
-  background: rgba(79,156,249,0.12);
-  color: var(--v);
+  background: rgba(255,140,66,0.12);
+  color: var(--car);
   font-size: 11px;
   font-weight: 800;
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -1202,15 +1179,17 @@ body::before {
   box-shadow: 0 4px 16px rgba(0,0,0,0.3);
 }
 
-.menu-fab:hover { background: var(--v); color: white; border-color: var(--v); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(79,156,249,0.3); }
+.menu-fab:hover { background: var(--car); color: white; border-color: var(--car); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,140,66,0.3); }
 .menu-fab:active { transform: scale(0.9); }
+.mpill{background:var(--bg2);border:1px solid var(--border);border-radius:20px;padding:5px 14px;font-size:11px;font-weight:600;color:var(--muted);cursor:pointer;white-space:nowrap;transition:all .2s;flex-shrink:0;}
+.mpill.active{background:var(--yellow);border-color:var(--yellow);color:#000;}
+#month-pills-wrap::-webkit-scrollbar{display:none;}
 </style>
 </head>
 <body>
 
 <!-- ══════════════════════ HOME ══════════════════════ -->
 <div class="screen active" id="s-home">
-  <div id="s-home">
     <div class="home-hero">
       <div class="hero-badge">SDR Tracker</div>
       <div class="hero-title">Curicica</div>
@@ -1229,14 +1208,9 @@ body::before {
 
     <!-- Status público — visível sem senha -->
     <div class="public-status-bar" id="public-status-bar">
-      <div class="pub-stat-card pending" id="pub-v">
+      <div class="pub-stat-card pending" id="pub-car">
         <div class="pub-stat-dot"></div>
-        <div class="pub-stat-ini" style="color:var(--v);">Pla</div>
-        <div class="pub-stat-lbl">Pendente</div>
-      </div>
-      <div class="pub-stat-card pending" id="pub-jq">
-        <div class="pub-stat-dot"></div>
-        <div class="pub-stat-ini" style="color:var(--jq);">Carol</div>
+        <div class="pub-stat-ini" style="color:var(--car);">Carol</div>
         <div class="pub-stat-lbl">Pendente</div>
       </div>
       <div class="pub-stat-card pending" id="pub-ju">
@@ -1248,18 +1222,8 @@ body::before {
 
     <div class="sec-lbl">Selecione seu perfil</div>
     <div class="profile-list">
-      <div class="profile-card v-card" onclick="openSDR('Duyane','Pla','v',false)">
-        <div class="avatar" style="background:rgba(79,156,249,0.1);color:var(--v);">Pla</div>
-        <div class="profile-info">
-          <div class="profile-name">Paula</div>
-          <div class="profile-sub">SDR · Curicica</div>
-        </div>
-        <span class="pstatus" id="ps-Paula" style="display:none"></span>
-        <span class="profile-arrow">›</span>
-      </div>
-
-      <div class="profile-card jq-card" onclick="openSDR('Caroline','Carol','jq',false)">
-        <div class="avatar" style="background:rgba(16,217,138,0.1);color:var(--jq);">Carol</div>
+      <div class="profile-card car-card" onclick="openSDR('Caroline','Carol','car',false)">
+        <div class="avatar" style="background:rgba(255,140,66,0.1);color:var(--car);">Carol</div>
         <div class="profile-info">
           <div class="profile-name">Caroline</div>
           <div class="profile-sub">SDR · Curicica</div>
@@ -1290,7 +1254,6 @@ body::before {
     </div>
 
     <div class="footer-sig">Criado e monitorado por Douglas Felipe</div>
-  </div>
 </div>
 
 <!-- ══════════════════════ PIN ══════════════════════ -->
@@ -1407,6 +1370,7 @@ body::before {
     <div style="flex:1;"></div>
     <span style="font-size:11px;color:var(--muted);">Douglas Felipe</span>
   </div>
+  <div id="month-pills-wrap" style="display:flex;gap:6px;overflow-x:auto;padding:10px 16px 2px;scrollbar-width:none;"></div>
   <div class="dash-inner">
     <div class="tabs">
       <button class="tab-btn" id="td-hoje" onclick="dtab('hoje')">Hoje</button>
@@ -1445,37 +1409,123 @@ body::before {
   </div>
   <div class="menu-body">
 
+    <!-- Checklist fim de turno -->
     <div class="menu-section">
       <div class="menu-section-title" style="color:var(--yellow);">✅ Checklist — Fim de Turno</div>
       <div class="rule-card" style="border-color:rgba(255,208,96,0.2);background:linear-gradient(135deg,var(--card),rgba(255,208,96,0.03));">
         <div style="font-size:11px;color:var(--yellow);font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px;">Antes de sair, confirme:</div>
         <div style="display:flex;flex-direction:column;gap:8px;">
           <div class="rule-text"><span style="font-size:16px;margin-right:8px;">📱</span><span>Verifiquei o Kommo e <strong>todos os leads respondidos</strong> do dia estão registrados</span></div>
-          <div class="rule-text"><span style="font-size:16px;margin-right:8px;">📅</span><span>Contei os <strong>agendamentos confirmados</strong> do dia</span></div>
-          <div class="rule-text"><span style="font-size:16px;margin-right:8px;">🔄</span><span>Registrei os <strong>reagendamentos</strong></span></div>
-          <div class="rule-text"><span style="font-size:16px;margin-right:8px;">🏥</span><span>Confirmei com a recepção quantos pacientes <strong>compareceram</strong></span></div>
-          <div class="rule-text"><span style="font-size:16px;margin-right:8px;">💰</span><span>Anotei as <strong>vendas fechadas</strong></span></div>
-          <div class="rule-text"><span style="font-size:16px;margin-right:8px;">💾</span><span>Cliquei em <strong>Salvar</strong></span></div>
+          <div class="rule-text"><span style="font-size:16px;margin-right:8px;">📅</span><span>Contei os <strong>agendamentos confirmados</strong> do dia — incluindo os que ligaram diretamente</span></div>
+          <div class="rule-text"><span style="font-size:16px;margin-right:8px;">🔄</span><span>Registrei os <strong>reagendamentos</strong> — pacientes que desmarcaram e remarcaram</span></div>
+          <div class="rule-text"><span style="font-size:16px;margin-right:8px;">🏥</span><span>Confirmei com a recepção quantos pacientes <strong>compareceram</strong> hoje</span></div>
+          <div class="rule-text"><span style="font-size:16px;margin-right:8px;">💰</span><span>Anotei as <strong>vendas fechadas</strong> — pacientes que assinaram contrato hoje</span></div>
+          <div class="rule-text"><span style="font-size:16px;margin-right:8px;">💾</span><span>Cliquei em <strong>Salvar</strong> — o app não salva automaticamente</span></div>
         </div>
       </div>
     </div>
 
+    <!-- Regras de preenchimento -->
     <div class="menu-section">
       <div class="menu-section-title">⚠️ Regras de Preenchimento</div>
-      <div class="rule-card"><div class="rule-text"><span class="rule-num">1</span><span>Preencher <strong>ao final do turno</strong>, antes de sair da clínica.</span></div></div>
-      <div class="rule-card"><div class="rule-text"><span class="rule-num">2</span><span>Os números são <strong>acumulativos do dia todo</strong>.</span></div></div>
-      <div class="rule-card"><div class="rule-text"><span class="rule-num">3</span><span>Agendamento só conta se a <strong>data e horário foram confirmados</strong>.</span></div></div>
-      <div class="rule-card"><div class="rule-text"><span class="rule-num">4</span><span>Comparecimento só conta se o paciente <strong>chegou fisicamente</strong>.</span></div></div>
-      <div class="rule-card"><div class="rule-text"><span class="rule-num">5</span><span>Venda só conta se o paciente <strong>assinou ou pagou</strong>.</span></div></div>
-      <div class="rule-card"><div class="rule-text"><span class="rule-num">6</span><span>Esqueceu? Use a aba <strong>Histórico</strong> para preencher retroativamente.</span></div></div>
+      <div class="rule-card"><div class="rule-text"><span class="rule-num">1</span><span>Preencher <strong>ao final do turno</strong>, antes de sair da clínica — nunca de memória no dia seguinte.</span></div></div>
+      <div class="rule-card"><div class="rule-text"><span class="rule-num">2</span><span>Os números são <strong>acumulativos do dia todo</strong> — some manhã + tarde, não só o último turno.</span></div></div>
+      <div class="rule-card"><div class="rule-text"><span class="rule-num">3</span><span>Agendamento só conta se a <strong>data e horário foram confirmados</strong> com o paciente.</span></div></div>
+      <div class="rule-card"><div class="rule-text"><span class="rule-num">4</span><span>Comparecimento só conta se o paciente <strong>chegou fisicamente à clínica</strong> — não vale só confirmar.</span></div></div>
+      <div class="rule-card"><div class="rule-text"><span class="rule-num">5</span><span>Venda só conta se o paciente <strong>assinou ou pagou</strong> — interesse não é venda.</span></div></div>
+      <div class="rule-card"><div class="rule-text"><span class="rule-num">6</span><span>Esqueceu um dia? Use a aba <strong>Histórico</strong> para preencher retroativamente — até 30 dias.</span></div></div>
+      <div class="rule-card"><div class="rule-text"><span class="rule-num">7</span><span>Dúvida no número? <strong>Consulte o Kommo</strong> antes de salvar — dado errado prejudica toda a análise.</span></div></div>
+      <div class="rule-card" style="border-color:rgba(255,140,66,0.2);"><div class="rule-text"><span class="rule-num" style="background:rgba(255,140,66,0.15);">⚡</span><span><strong>Leads são automáticos</strong> via Kommo — nunca altere esse número manualmente.</span></div></div>
     </div>
 
+    <!-- Definições das métricas -->
+    <div class="menu-section">
+      <div class="menu-section-title">📊 O que é cada métrica?</div>
+      <div class="rule-card">
+        <div class="metric-def">
+          <div class="metric-def-icon" style="background:rgba(255,140,66,0.1);">⚡</div>
+          <div class="metric-def-info">
+            <div class="metric-def-name">Novos Leads</div>
+            <div class="metric-def-desc">Contatos que chegaram pelo tráfego pago (Meta/Google) e entraram no Kommo. <strong>Automático.</strong></div>
+          </div>
+          <span class="meta-badge" style="background:rgba(255,140,66,0.1);color:var(--car);">Auto</span>
+        </div>
+        <div class="metric-def">
+          <div class="metric-def-icon" style="background:rgba(16,217,138,0.1);">📅</div>
+          <div class="metric-def-info">
+            <div class="metric-def-name">Agendamentos</div>
+            <div class="metric-def-desc">Consultas com data e hora marcadas. Conta mesmo se for para dias futuros — o que importa é <strong>quando foi marcado</strong>, não quando vai acontecer.</div>
+          </div>
+          <span class="meta-badge">≥ 30%</span>
+        </div>
+        <div class="metric-def">
+          <div class="metric-def-icon" style="background:rgba(255,208,96,0.1);">🔄</div>
+          <div class="metric-def-info">
+            <div class="metric-def-name">Reagendamentos</div>
+            <div class="metric-def-desc">Paciente que já tinha consulta marcada, desmarcou e <strong>remarcou no mesmo contato</strong>. Não conta quem só desmarcou.</div>
+          </div>
+        </div>
+        <div class="metric-def">
+          <div class="metric-def-icon" style="background:rgba(160,96,240,0.1);">🏥</div>
+          <div class="metric-def-info">
+            <div class="metric-def-name">Comparecimentos</div>
+            <div class="metric-def-desc">Pacientes que <strong>apareceram fisicamente</strong> na clínica hoje — confirme com a recepção no fim do dia.</div>
+          </div>
+          <span class="meta-badge">≥ 40%</span>
+        </div>
+        <div class="metric-def">
+          <div class="metric-def-icon" style="background:rgba(255,84,112,0.1);">💰</div>
+          <div class="metric-def-info">
+            <div class="metric-def-name">Vendas</div>
+            <div class="metric-def-desc">Pacientes que <strong>fecharam o tratamento</strong> hoje — assinaram ou realizaram o pagamento.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Erros comuns -->
+    <div class="menu-section">
+      <div class="menu-section-title" style="color:var(--red);">🚫 Erros Comuns — Evite!</div>
+      <div class="rule-card" style="border-color:rgba(255,84,112,0.15);">
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div class="rule-text"><span style="color:var(--red);margin-right:8px;font-weight:800;">✗</span><span>Preencher "de cabeça" no dia seguinte sem consultar o Kommo</span></div>
+          <div class="rule-text"><span style="color:var(--red);margin-right:8px;font-weight:800;">✗</span><span>Contar como comparecimento paciente que <strong>confirmou mas não apareceu</strong></span></div>
+          <div class="rule-text"><span style="color:var(--red);margin-right:8px;font-weight:800;">✗</span><span>Contar como venda paciente que "ficou de pensar" ou "vai confirmar amanhã"</span></div>
+          <div class="rule-text"><span style="color:var(--red);margin-right:8px;font-weight:800;">✗</span><span>Esquecer de salvar — o botão <strong>Salvar</strong> é obrigatório</span></div>
+          <div class="rule-text"><span style="color:var(--red);margin-right:8px;font-weight:800;">✗</span><span>Alterar o número de Leads manualmente — ele é automático</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Atenção Jully -->
     <div class="menu-section">
       <div class="menu-section-title" style="color:var(--ju);">🟣 Atenção: Jully</div>
       <div class="rule-card" style="border-color:rgba(160,96,240,0.2);">
         <div class="rule-text" style="flex-direction:column;gap:6px;">
-          <span>Jully <strong>não recebe leads do tráfego pago</strong>.</span>
-          <span>Preenche apenas: <strong>Agendamentos, Reagendamentos, Comparecimentos e Vendas.</strong></span>
+          <span>Jully <strong>não recebe leads do tráfego pago</strong> — por isso não tem a métrica de Novos Leads.</span>
+          <span style="margin-top:4px;">Preenche apenas: <strong>Agendamentos, Reagendamentos, Comparecimentos e Vendas.</strong></span>
+          <span style="margin-top:4px;font-size:11px;color:var(--muted);">Os pacientes da Jully vêm de outras origens (indicação, base antiga, etc).</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Metas -->
+    <div class="menu-section">
+      <div class="menu-section-title" style="color:var(--green);">🎯 Metas do Mês</div>
+      <div class="rule-card">
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div class="status-row s-ok" style="margin:0;justify-content:space-between;">
+            <span>Agend / Lead</span>
+            <span style="font-weight:800;">≥ 30%</span>
+          </div>
+          <div class="status-row s-ok" style="margin:0;justify-content:space-between;">
+            <span>Comp / Agend</span>
+            <span style="font-weight:800;">≥ 40%</span>
+          </div>
+        </div>
+        <div style="margin-top:10px;font-size:11px;color:var(--muted);line-height:1.6;">
+          Exemplo: se você teve 10 leads e marcou 4 consultas → 40% de agend/lead ✓<br>
+          Se 4 foram agendados e 2 compareceram → 50% de comp/agend ✓
         </div>
       </div>
     </div>
@@ -1491,26 +1541,31 @@ body::before {
 import{initializeApp,getApps}from'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
 import{getFirestore,doc,setDoc,getDoc,writeBatch}from'https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js';
 
+// ── Firebase config embutida ──
 const FB_CFG = {
-  apiKey: "AIzaSyBE_DUL36J6HWgYSUKkUTsppgVAh5wSXw4",
-  authDomain: "curicica-agendamentos-mensal.firebaseapp.com",
-  projectId: "curicica-agendamentos-mensal",
-  storageBucket: "curicica-agendamentos-mensal.firebasestorage.app",
-  messagingSenderId: "313190510499",
-  appId: "1:313190510499:web:d71e382d426da23c7cf416"
+  apiKey: "AIzaSyAJqlgbvUc8DcKnzOSuTn6i9aEF1MhyFPM",
+  authDomain: "sjm-agendamentos-mensal.firebaseapp.com",
+  projectId: "sjm-agendamentos-mensal",
+  storageBucket: "sjm-agendamentos-mensal.firebasestorage.app",
+  messagingSenderId: "88940131876",
+  appId: "1:88940131876:web:98a1c6f229b00375020ab1"
 };
 
 let db = null;
 const DEFAULT_PIN = '2026';
+const LS_PFX='cur:';
+const lsGet=k=>localStorage.getItem(LS_PFX+k);
+const lsSet=(k,v)=>localStorage.setItem(LS_PFX+k,v);
+const lsDel=k=>localStorage.removeItem(LS_PFX+k);
 let isAuth = false;
 
-function loadCfg(){ try{ const r=localStorage.getItem('cur:sdr_fb_cfg'); return r?JSON.parse(r):null; }catch{ return null; } }
+function loadCfg(){ try{ const r=lsGet('sdr_fb_cfg'); return r?JSON.parse(r):null; }catch{ return null; } }
 function getPin(){ const c=loadCfg(); return(c&&c.pin)?c.pin:DEFAULT_PIN; }
 
 function initFB(){
   try{
-    const ex = getApps().find(a=>a.name==='sdr');
-    const app = ex || initializeApp(FB_CFG,'sdr');
+    const ex = getApps().find(a=>a.name==='curicica2');
+    const app = ex || initializeApp(FB_CFG,'curicica2');
     db = getFirestore(app);
     return true;
   } catch(e){ console.error('Firebase init error:',e); return false; }
@@ -1524,10 +1579,10 @@ window.saveConfig=function(){
     pin:document.getElementById('cfg-pin').value.trim()||DEFAULT_PIN,
   };
   if(!cfg.apiKey||!cfg.projectId){showToast('Preencha API Key e Project ID','err');return;}
-  localStorage.setItem('cur:sdr_fb_cfg',JSON.stringify(cfg));
+  lsSet('sdr_fb_cfg',JSON.stringify(cfg));
   const ok=initFB();
   const s=document.getElementById('cfg-status');
-  if(ok){s.style.color='var(--green)';s.textContent='✓ Firebase conectado!';showToast('Conectado!','ok');}
+  if(ok){s.style.color='var(--green)';s.textContent='✓ Firebase conectado!';playSound('save');showToast('Conectado!','ok');}
   else{s.style.color='var(--red)';s.textContent='✗ Erro — verifique as credenciais';showToast('Erro','err');}
 };
 
@@ -1556,8 +1611,46 @@ const todayN=now.getDate();
 const mKey=`${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}`;
 const dInM=new Date(now.getFullYear(),now.getMonth()+1,0).getDate();
 const MONTH_SUMMARY_KEY=`summary_${mKey}`;
-let CUR={},vals={},editDay=null,editVals={},adminCtx={};
+let CUR={},vals={},editDay=null,editVals={},adminCtx={},monthCache={};
+let dashMKey=mKey;
+function dashDInM(){const[y,m]=dashMKey.split('-').map(Number);return new Date(y,m,0).getDate();}
+function dashDKey(sdr,day){return`${sdr}_${dashMKey}_${day}`;}
+function dashSKey(sdr){return`${sdr}_summary_${dashMKey}`;}
+function isCurrentDashMonth(){return dashMKey===mKey;}
+function dashMonthLabel(mk){
+  const[y,m]=mk.split('-').map(Number);
+  return new Date(y,m-1,1).toLocaleDateString('pt-BR',{month:'short',year:'2-digit'}).replace('.','');
+}
+async function dbGetDash(sdr,day){
+  if(!db)return null;
+  try{const s=await getDoc(doc(db,'curicica2_sdr_tracker',dashDKey(sdr,day)));return s.exists()?s.data():null;}catch(e){return null;}
+}
+async function getSummaryDash(sdr){
+  if(!db)return{};
+    const M=['agend','leads','comp','reag','vend'];
+    const s=Object.fromEntries(M.map(m=>[m,0]));
+    for(let d=1;d<=31;d++){
+          try{const snap=await getDoc(doc(db,'curicica2_sdr_tracker',dashDKey(sdr,d)));if(snap.exists())M.forEach(m=>{s[m]+=(snap.data()[m]||0);});}catch(e){}
+    }
+    return s;
+}
+function buildMonthPills(){
+  const wrap=document.getElementById('month-pills-wrap');if(!wrap)return;
+  const pills=[];
+  for(let i=0;i<6;i++){
+    const d=new Date(now.getFullYear(),now.getMonth()-i,1);
+    const mk=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`;
+    pills.push({mk,lbl:dashMonthLabel(mk)});
+  }
+  wrap.innerHTML=pills.map(p=>`<div class="mpill${p.mk===dashMKey?' active':''}" onclick="window.selectDashMonth('${p.mk}')">${p.lbl}</div>`).join('');
+}
+window.selectDashMonth=function(mk){
+  dashMKey=mk;playSound('month');buildMonthPills();
+  const active=['hoje','mes','edit'].find(t=>document.getElementById('td-'+t)?.classList.contains('active'))||'mes';
+  dtab(active,true);
+};
 
+// Check Jully hours
 function checkJullyHours(){
   const h=now.getHours();
   const isComercial=h>=8&&h<18;
@@ -1579,31 +1672,38 @@ window.goTo=function(id){
   document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   if(id==='s-config')fillConfigFields();
+  playSound('nav');
 };
 
 function dKey(sdr,day){return`${sdr}_${mKey}_${day}`;}
 function sKey(sdr){return`${sdr}_${MONTH_SUMMARY_KEY}`;}
-function rgb(c){return c==='v'?'79,142,247':c==='jq'?'16,217,138':'160,96,240';}
+function rgb(c){return c==='car'?'255,140,66':'160,96,240';}
 
 async function dbSet(sdr,day,data,metrics){
+  // Salva localStorage imediatamente
   const lk='loc_'+dKey(sdr,day);
-  localStorage.setItem(lk,JSON.stringify(data));
+  lsSet(lk,JSON.stringify(data));
+
+  // Atualiza summary local
   const sumKey='loc_'+sKey(sdr);
   let summary={};
-  try{const r=localStorage.getItem(sumKey);if(r)summary=JSON.parse(r);}catch{}
-  const old=JSON.parse(localStorage.getItem(lk+'.old')||'{}');
+  try{const r=lsGet(sumKey);if(r)summary=JSON.parse(r);}catch{}
+  const old=JSON.parse(lsGet(lk+'.old')||'{}');
   metrics.forEach(m=>{
     summary[m.key]=(summary[m.key]||0)-(old[m.key]||0)+(data[m.key]||0);
     if(summary[m.key]<0)summary[m.key]=0;
   });
-  localStorage.setItem(lk+'.old',JSON.stringify(data));
-  localStorage.setItem(sumKey,JSON.stringify(summary));
+  lsSet(lk+'.old',JSON.stringify(data));
+  lsSet(sumKey,JSON.stringify(summary));
+
+  // Salva no Firebase
   if(db){
     try{
       const batch=writeBatch(db);
-      batch.set(doc(db,'sdr_tracker',dKey(sdr,day)),data);
-      batch.set(doc(db,'sdr_summary',sKey(sdr)),summary,{merge:true});
+      batch.set(doc(db,'curicica2_sdr_tracker',dKey(sdr,day)),data);
+      batch.set(doc(db,'curicica2_sdr_summary',sKey(sdr)),summary,{merge:true});
       await batch.commit();
+      console.log('Firebase salvo com sucesso:', dKey(sdr,day));
     }catch(e){
       console.error('Firebase write error:', e);
       showToast('Salvo localmente — Firebase indisponível','err');
@@ -1613,43 +1713,44 @@ async function dbSet(sdr,day,data,metrics){
 }
 
 async function dbGet(sdr,day){
+  // Sempre tenta Firebase primeiro
   if(db){
     try{
-      const s=await getDoc(doc(db,'sdr_tracker',dKey(sdr,day)));
+      const s=await getDoc(doc(db,'curicica2_sdr_tracker',dKey(sdr,day)));
       if(s.exists()){
         const d=s.data();
-        localStorage.setItem('loc_'+dKey(sdr,day),JSON.stringify(d));
+        lsSet('loc_'+dKey(sdr,day),JSON.stringify(d));
         return d;
       } else {
-        localStorage.removeItem('loc_'+dKey(sdr,day));
+        lsDel('loc_'+dKey(sdr,day));
         return null;
       }
     }catch(e){
       console.warn('Firebase read error, usando cache local:',e);
     }
   }
-  const r=localStorage.getItem('loc_'+dKey(sdr,day));
+  // Fallback localStorage
+  const r=lsGet('loc_'+dKey(sdr,day));
   return r?JSON.parse(r):null;
 }
 
 async function getMonthSummary(sdr){
   if(db){
     try{
-      const s=await getDoc(doc(db,'sdr_summary',sKey(sdr)));
+      const s=await getDoc(doc(db,'curicica2_sdr_summary',sKey(sdr)));
       if(s.exists()){
         const d=s.data();
-        localStorage.setItem('loc_'+sKey(sdr),JSON.stringify(d));
+        lsSet('loc_'+sKey(sdr),JSON.stringify(d));
         return d;
       }
     }catch(e){ console.warn('Firebase summary error:',e); }
   }
-  const r=localStorage.getItem('loc_'+sKey(sdr));
+  const r=lsGet('loc_'+sKey(sdr));
   return r?JSON.parse(r):{};
 }
 
 const SDRS=[
-  {name:'Duyane',ini:'Pla',col:'v',metrics:MF,jully:false},
-  {name:'Caroline',ini:'Carol',col:'jq',metrics:MF,jully:false},
+  {name:'Caroline',ini:'Carol',col:'car',metrics:MF,jully:false},
   {name:'Jully',ini:'Ju',col:'ju',metrics:MJ,jully:true},
 ];
 
@@ -1691,6 +1792,7 @@ async function loadHomeResumo(){
     if(ps){ps.style.display='inline-flex';ps.textContent=ok?'✓ OK':'Pendente';ps.style.background=ok?'var(--green-dim)':'var(--red-dim)';ps.style.color=ok?'var(--green)':'var(--red)';}
   }
 
+  // Alerta só para o DIA ANTERIOR (ontem) sem preenchimento
   const alertArea=document.getElementById('alert-area');
   const yesterday = todayN - 1;
   if(yesterday >= 1){
@@ -1719,8 +1821,9 @@ window.openSDR=async function(name,ini,col,jully){
   document.getElementById('sdr-date-top').textContent=now.toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long'}).toUpperCase();
   const av=document.getElementById('sdr-av-top');
   av.textContent=ini;av.style.background=`rgba(${rgb(col)},0.12)`;av.style.color=`var(--${col})`;
+  // Color save btn
   const btn=document.getElementById('save-btn');
-  btn.className='save-btn'+(col==='jq'?' jq-color':col==='ju'?' ju-color':'');
+  btn.className='save-btn'+(col==='ju'?' ju-color':'');
   goTo('s-sdr');tab('hoje');
   showToast('Carregando...');
   const today=await dbGet(name,todayN);
@@ -1792,13 +1895,12 @@ window.saveDay=async function(){
   btn.classList.add('loading');btn.innerHTML='<div class="spin"></div>&nbsp;Salvando...';
   await dbSet(CUR.name,todayN,{...vals},CUR.metrics);
   btn.classList.remove('loading');btn.classList.add('saved');btn.textContent='✓ Salvo!';
-  showToast('Dados salvos!','ok');
-  await loadPublicStatus();
+  playSound('save');showToast('Dados salvos!','ok');
   if(isAuth)await loadHomeResumo();
   setTimeout(()=>{btn.classList.remove('saved');btn.textContent='Salvar';},3000);
 };
 
-window.tab=function(t){
+window.tab=function(t){playSound('tab');
   ['hoje','mes','hist'].forEach(x=>{
     document.getElementById('t-'+x).classList.toggle('active',x===t);
     document.getElementById('p-'+x).style.display=x===t?'block':'none';
@@ -1811,8 +1913,8 @@ async function renderMes(){
   c.innerHTML='<div style="text-align:center;padding:2rem;color:var(--muted);">Carregando...</div>';
   const summary=await getMonthSummary(CUR.name);
   const col=CUR.col;
-  const colHex=col==='v'?'#4f9cf9':col==='jq'?'#10d98a':'#a060f0';
-  const colRgb=col==='v'?'79,156,249':col==='jq'?'16,217,138':'160,96,240';
+  const colHex=col==='car'?'#ff8c42':'#a060f0';
+  const colRgb=col==='car'?'255,140,66':'160,96,240';
 
   const dailyData=[];
   for(let d=1;d<=todayN;d++){
@@ -1876,6 +1978,7 @@ async function renderMes(){
   }
 
   let h=`<div style="height:4px;"></div>`;
+
   h+=`<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;">
     ${!CUR.jully?`<div class="dash-block" style="padding:16px;border-left:3px solid ${colHex};">
       <div class="slbl">Leads do mês</div>
@@ -1916,8 +2019,8 @@ async function renderMes(){
 
   h+=`<div class="dash-block" style="margin-bottom:10px;">
     <div class="slbl" style="margin-bottom:14px;">Funil do Mês</div>
-    ${!CUR.jully?funnelBar(leads,leads,'var(--v)','Leads',null,null):''}
-    ${funnelBar(agend,!CUR.jully?leads:agend,'var(--jq)','Agendamentos',!CUR.jully?convAL:null,30)}
+    ${!CUR.jully?funnelBar(leads,leads,'var(--car)','Leads',null,null):''}
+    ${funnelBar(agend,!CUR.jully?leads:agend,'var(--green)','Agendamentos',!CUR.jully?convAL:null,30)}
     ${funnelBar(reag,!CUR.jully?leads:agend,colHex,'Reagendamentos',null,null)}
     ${funnelBar(comp,agend,'var(--ju)','Comparecimentos',convCA,40)}
     ${funnelBar(vend,comp||1,'var(--yellow)','Vendas',convVA,null)}
@@ -1957,20 +2060,32 @@ async function renderMes(){
 
 async function renderHist(){
   const c=document.getElementById('p-hist');
-  c.innerHTML='<div style="text-align:center;padding:2rem;color:var(--muted);">Carregando...</div>';
-  const days=[];for(let d=1;d<=dInM;d++){const data=await dbGet(CUR.name,d);if(data)days.push(d);}
-  let h='<div style="height:4px;"></div><div class="sec-lbl">Toque para editar qualquer dia</div><div class="cal-grid">';
-  for(let d=1;d<=dInM;d++){
-    const has=days.includes(d),isT=d===todayN,fut=d>todayN;
-    let cls='day-cell';if(isT)cls+=' today';else if(has)cls+=' has';if(fut)cls+=' future';
-    h+=`<div class="${cls}" ${fut?'':` onclick="openEditDay(${d})"`}>${d}</div>`;
+  const hasCal=c.querySelector('.cal-grid');
+  if(!hasCal){
+    let h='<div style="height:4px;"></div><div class="sec-lbl">Toque para editar qualquer dia</div><div class="cal-grid" id="cal-grid">';
+    for(let d=1;d<=dInM;d++){
+      const isT=d===todayN,fut=d>todayN;
+      let cls='day-cell';if(isT)cls+=' today';if(fut)cls+=' future';
+      h+=`<div class="${cls}" id="dc-${d}" ${fut?'':` onclick="openEditDay(${d})"`}>${d}</div>`;
+    }
+    h+='</div>';c.innerHTML=h;
   }
-  h+='</div>';c.innerHTML=h;
+  const promises=[];for(let d=1;d<=dInM;d++)promises.push(dbGet(CUR.name,d).then(data=>({d,data})));
+  const results=await Promise.all(promises);
+  monthCache={};
+  results.forEach(({d,data})=>{
+    if(data)monthCache[d]=data;
+    const el=document.getElementById('dc-'+d);
+    if(!el)return;
+    const has=!!data,isT=d===todayN,fut=d>todayN;
+    let cls='day-cell';if(isT)cls+=' today';else if(has)cls+=' has';if(fut)cls+=' future';
+    el.className=cls;
+  });
 }
 
-window.openEditDay=async function(day){
+window.openEditDay=function(day){
   editDay=day;
-  const data=await dbGet(CUR.name,day);
+  const data=monthCache[day]||null;
   editVals={};CUR.metrics.forEach(m=>editVals[m.key]=data?(data[m.key]||0):0);
   const isT=day===todayN;
   const lbl=isT?'Hoje':`Dia ${day}/${String(now.getMonth()+1).padStart(2,'0')}`;
@@ -2011,16 +2126,20 @@ window.saveEditDay=async function(){
   const btn=document.getElementById('edit-save-btn');
   btn.classList.add('loading');btn.innerHTML='<div class="spin"></div>&nbsp;Salvando...';
   await dbSet(CUR.name,editDay,{...editVals},CUR.metrics);
+  monthCache[editDay]={...editVals};
+  const cell=document.getElementById('dc-'+editDay);
+  if(cell){const isT=editDay===todayN;cell.className='day-cell'+(isT?' today':' has');}
   btn.classList.remove('loading');btn.classList.add('saved');btn.textContent='✓ Salvo!';
   showToast('Dados salvos!','ok');
-  await loadPublicStatus();
   if(isAuth)await loadHomeResumo();
   setTimeout(()=>{btn.classList.remove('saved');btn.textContent='Salvar alterações';goTo('s-sdr');tab('hist');},2000);
 };
 
 // Dashboard
-window.dtab=function(t){
+window.dtab=function(t,noSound){
   ['hoje','mes','edit'].forEach(x=>document.getElementById('td-'+x).classList.toggle('active',x===t));
+  if(!noSound)playSound('tab');
+  buildMonthPills();
   const c=document.getElementById('dash-content');
   c.innerHTML='<div style="text-align:center;padding:2rem;color:var(--muted);">Carregando...</div>';
   if(t==='hoje')renderDashHoje(c);if(t==='mes')renderDashMes(c);if(t==='edit')renderDashEdit(c);
@@ -2039,6 +2158,7 @@ function ringChartD(pct,color,size=72){
 }
 
 async function renderDashHoje(c){
+  if(!isCurrentDashMonth()){c.innerHTML=`<div style="text-align:center;padding:3rem 1rem;"><div style="font-size:40px;margin-bottom:12px;">📅</div><div style="font-size:15px;font-weight:700;margin-bottom:8px;">Só disponível no mês atual</div><div style="font-size:12px;color:var(--muted);">Selecione <strong>${dashMonthLabel(mKey)}</strong> para ver o dia de hoje.</div></div>`;return;}
   let h='<div style="height:4px;"></div>';
   const grand={leads:0,agend:0,reag:0,comp:0,vend:0};
   const sdrData=[];
@@ -2063,7 +2183,7 @@ async function renderDashHoje(c){
   h+=`<div class="dash-block" style="margin-bottom:10px;">
     <div class="slbl" style="margin-bottom:12px;">Total Geral Hoje</div>
     <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px;">
-      ${[{k:'leads',l:'Leads',c:'var(--v)'},{k:'agend',l:'Agend',c:'var(--jq)'},{k:'reag',l:'Reagend',c:'var(--yellow)'},{k:'comp',l:'Comp',c:'var(--ju)'},{k:'vend',l:'Vendas',c:'var(--green)'}]
+      ${[{k:'leads',l:'Leads',c:'var(--car)'},{k:'agend',l:'Agend',c:'var(--green)'},{k:'reag',l:'Reagend',c:'var(--yellow)'},{k:'comp',l:'Comp',c:'var(--ju)'},{k:'vend',l:'Vendas',c:'var(--green)'}]
         .map(x=>`<div style="background:var(--bg3);border-radius:10px;padding:10px 6px;text-align:center;">
           <div style="font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;">${x.l}</div>
           <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;font-weight:800;color:${x.c};">${grand[x.k]||0}</div>
@@ -2084,8 +2204,8 @@ async function renderDashHoje(c){
   </div>`;
 
   for(const s of sdrData){
-    const colHex=s.col==='v'?'#4f9cf9':s.col==='jq'?'#10d98a':'#a060f0';
-    const colRgb=s.col==='v'?'79,156,249':s.col==='jq'?'16,217,138':'160,96,240';
+    const colHex=s.col==='car'?'#ff8c42':'#a060f0';
+    const colRgb=s.col==='car'?'255,140,66':'160,96,240';
     const al=s.vals.leads>0?Math.round(s.vals.agend/s.vals.leads*100):0;
     const ca=s.vals.agend>0?Math.round(s.vals.comp/s.vals.agend*100):0;
     h+=`<div class="dash-block" style="border-left:3px solid ${colHex};margin-bottom:10px;">
@@ -2119,6 +2239,12 @@ async function renderDashHoje(c){
         </div>`;
       });
       h+=`</div>`;
+      if(!s.jully&&s.vals.leads>0||s.vals.agend>0){
+        h+=`<div style="display:flex;gap:6px;margin-top:10px;">`;
+        if(!s.jully&&s.vals.leads>0)h+=`<div style="flex:1;padding:6px;background:${al>=30?'var(--green-dim)':'var(--red-dim)'};border-radius:8px;text-align:center;"><div style="font-size:9px;color:var(--muted);">Agend/Lead</div><div style="font-size:13px;font-weight:800;color:${al>=30?'var(--green)':'var(--red)'};">${al}%</div></div>`;
+        if(s.vals.agend>0)h+=`<div style="flex:1;padding:6px;background:${ca>=40?'var(--green-dim)':'var(--red-dim)'};border-radius:8px;text-align:center;"><div style="font-size:9px;color:var(--muted);">Comp/Agend</div><div style="font-size:13px;font-weight:800;color:${ca>=40?'var(--green)':'var(--red)'};">${ca}%</div></div>`;
+        h+=`</div>`;
+      }
     }else{
       h+=`<div style="font-size:13px;color:var(--muted);text-align:center;padding:12px 0;">Sem dados hoje</div>`;
     }
@@ -2130,25 +2256,26 @@ async function renderDashHoje(c){
 
 async function renderDashMes(c){
   let h='<div style="height:4px;"></div>';
+
   const allDaily={};
+  const _dLim=isCurrentDashMonth()?todayN:dashDInM();
   for(const s of SDRS){
-    allDaily[s.name]=[];
-    for(let d=1;d<=todayN;d++){
-      const day=await dbGet(s.name,d);
-      allDaily[s.name].push({d,leads:day?.leads||0,agend:day?.agend||0,comp:day?.comp||0,vend:day?.vend||0});
-    }
+    const proms=Array.from({length:_dLim},(_,i)=>dbGetDash(s.name,i+1).then(day=>({d:i+1,leads:day?.leads||0,agend:day?.agend||0,comp:day?.comp||0,vend:day?.vend||0})));
+    allDaily[s.name]=await Promise.all(proms);
   }
+
   const summaries={};
-  for(const s of SDRS) summaries[s.name]=await getMonthSummary(s.name);
+  for(const s of SDRS) summaries[s.name]=await getSummaryDash(s.name);
   const grand={leads:0,agend:0,reag:0,comp:0,vend:0};
   SDRS.forEach(s=>s.metrics.forEach(m=>{grand[m.key]=(grand[m.key]||0)+(summaries[s.name][m.key]||0);}));
+
   const gAL=grand.leads>0?Math.round(grand.agend/grand.leads*100):0;
   const gCA=grand.agend>0?Math.round(grand.comp/grand.agend*100):0;
 
   h+=`<div class="dash-block" style="margin-bottom:10px;">
     <div class="slbl" style="margin-bottom:12px;">Total Consolidado do Mês</div>
     <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:14px;">
-      ${[{k:'leads',l:'Leads',c:'var(--v)'},{k:'agend',l:'Agend',c:'var(--jq)'},{k:'reag',l:'Reagend',c:'var(--yellow)'},{k:'comp',l:'Comp',c:'var(--ju)'},{k:'vend',l:'Vendas',c:'var(--green)'}]
+      ${[{k:'leads',l:'Leads',c:'var(--car)'},{k:'agend',l:'Agend',c:'var(--green)'},{k:'reag',l:'Reagend',c:'var(--yellow)'},{k:'comp',l:'Comp',c:'var(--ju)'},{k:'vend',l:'Vendas',c:'var(--green)'}]
         .map(x=>`<div style="background:var(--bg3);border-radius:10px;padding:10px 6px;text-align:center;">
           <div style="font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;">${x.l}</div>
           <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;font-weight:800;color:${x.c};">${grand[x.k]||0}</div>
@@ -2168,13 +2295,45 @@ async function renderDashMes(c){
     </div>
   </div>`;
 
+  const maxDay=todayN;
+  const colorsSDR=['#ff8c42','#a060f0'];
+  const svgH=100,svgW=300;
+  const maxAgend=Math.max(...SDRS.map(s=>Math.max(...allDaily[s.name].map(d=>d.agend))),1);
+  let lines='';
+  SDRS.forEach((s,si)=>{
+    const data=allDaily[s.name];
+    if(data.length<2)return;
+    const pts=data.map((d,i)=>{
+      const x=(i/(data.length-1))*svgW;
+      const y=svgH-4-(d.agend/maxAgend)*(svgH-8);
+      return`${x},${y}`;
+    }).join(' ');
+    lines+=`<polyline points="${pts}" fill="none" stroke="${colorsSDR[si]}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>`;
+    const last=data[data.length-1];
+    const lx=svgW;const ly=svgH-4-(last.agend/maxAgend)*(svgH-8);
+    lines+=`<circle cx="${lx}" cy="${ly}" r="3" fill="${colorsSDR[si]}"/>`;
+  });
+  h+=`<div class="dash-block" style="margin-bottom:10px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+      <div class="slbl">Agendamentos por SDR</div>
+      <div style="display:flex;gap:8px;">
+        ${SDRS.map((s,i)=>`<span style="font-size:10px;color:${colorsSDR[i]};">■ ${s.name.slice(0,3)}</span>`).join('')}
+      </div>
+    </div>
+    <svg viewBox="0 0 ${svgW} ${svgH}" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:${svgH}px;">
+      <line x1="0" y1="${svgH}" x2="${svgW}" y2="${svgH}" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+      ${lines}
+    </svg>
+  </div>`;
+
   for(const s of SDRS){
     const sum=summaries[s.name];
-    const colHex=s.col==='v'?'#4f9cf9':s.col==='jq'?'#10d98a':'#a060f0';
-    const colRgb=s.col==='v'?'79,156,249':s.col==='jq'?'16,217,138':'160,96,240';
+    const colHex=s.col==='car'?'#ff8c42':'#a060f0';
+    const colRgb=s.col==='car'?'255,140,66':'160,96,240';
     const leads=sum.leads||0,agend=sum.agend||0,comp=sum.comp||0,vend=sum.vend||0,reag=sum.reag||0;
     const al=leads>0?Math.round(agend/leads*100):0;
     const ca=agend>0?Math.round(comp/agend*100):0;
+
     const vData=allDaily[s.name];
     const vMax=Math.max(...vData.map(d=>d.vend),1);
     const vPts=vData.length>1?vData.map((d,i)=>{
@@ -2189,8 +2348,8 @@ async function renderDashMes(c){
         <div style="flex:1;"><div class="dname">${s.name}</div></div>
       </div>
       <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:10px;">
-        ${!s.jully?`<div style="background:var(--bg3);border-radius:10px;padding:10px;"><div class="slbl">Leads</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:22px;font-weight:800;color:var(--v);">${leads}</div></div>`:''}
-        <div style="background:var(--bg3);border-radius:10px;padding:10px;"><div class="slbl">Agend.</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:22px;font-weight:800;color:var(--jq);">${agend}</div></div>
+        ${!s.jully?`<div style="background:var(--bg3);border-radius:10px;padding:10px;"><div class="slbl">Leads</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:22px;font-weight:800;color:var(--car);">${leads}</div></div>`:''}
+        <div style="background:var(--bg3);border-radius:10px;padding:10px;"><div class="slbl">Agend.</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:22px;font-weight:800;color:var(--green);">${agend}</div></div>
         <div style="background:var(--bg3);border-radius:10px;padding:10px;"><div class="slbl">Reagend.</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:22px;font-weight:800;color:var(--yellow);">${reag}</div></div>
         <div style="background:var(--bg3);border-radius:10px;padding:10px;"><div class="slbl">Comp.</div><div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:22px;font-weight:800;color:var(--ju);">${comp}</div></div>
         <div style="background:var(--bg3);border-radius:10px;padding:10px;grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;">
@@ -2206,6 +2365,7 @@ async function renderDashMes(c){
       </div>
     </div>`;
   }
+
   h+=`<div class="footer-sig">CRIADO E MONITORADO POR DOUGLAS FELIPE</div>`;
   c.innerHTML=h;
 }
@@ -2213,10 +2373,11 @@ async function renderDashMes(c){
 async function renderDashEdit(c){
   let h='<div style="height:4px;"></div><div class="sec-lbl">Clique em qualquer dia para corrigir</div>';
   for(const s of SDRS){
-    const days=[];for(let d=1;d<=dInM;d++){const data=await dbGet(s.name,d);if(data)days.push(d);}
+    const _dm=dashDInM(),_isC=isCurrentDashMonth();
+    const _days=await Promise.all(Array.from({length:_dm},(_,i)=>dbGetDash(s.name,i+1).then(data=>data?i+1:null))).then(r=>r.filter(Boolean));
     h+=`<div class="dash-block" style="border-left:3px solid var(--${s.col});margin-bottom:10px;"><div class="dash-hdr" style="margin-bottom:12px;"><div class="avatar" style="width:38px;height:38px;font-size:13px;border-radius:10px;background:rgba(${rgb(s.col)},0.12);color:var(--${s.col});">${s.ini}</div><div class="dname">${s.name}</div></div><div class="cal-grid">`;
-    for(let d=1;d<=dInM;d++){
-      const has=days.includes(d),isT=d===todayN,fut=d>todayN;
+    for(let d=1;d<=_dm;d++){
+      const has=_days.includes(d),isT=_isC&&d===todayN,fut=_isC&&d>todayN;
       let cls='day-cell';if(isT)cls+=' today';else if(has)cls+=' has';if(fut)cls+=' future';
       h+=`<div class="${cls}" ${fut?'':` onclick="openAdminEdit('${s.name}','${s.col}',${s.jully},${d})"`}>${d}</div>`;
     }
@@ -2228,9 +2389,9 @@ async function renderDashEdit(c){
 
 window.openAdminEdit=async function(name,col,jully,day){
   const metrics=jully?MJ:MF;
-  const data=await dbGet(name,day);
-  adminCtx={name,col,jully,metrics,day};
-  const lbl=day===todayN?'Hoje':`Dia ${day}/${String(now.getMonth()+1).padStart(2,'0')}`;
+  const data=await dbGetDash(name,day);
+  adminCtx={name,col,jully,metrics,day,mkey:dashMKey};
+  const[_ay,_am]=dashMKey.split('-');const lbl=`Dia ${day}/${_am}/${_ay.slice(2)}`;
   document.getElementById('admin-edit-title').textContent=`${name} · ${lbl}`;
   const c=document.getElementById('admin-edit-fields');c.innerHTML='';
   metrics.forEach(m=>{
@@ -2244,15 +2405,15 @@ window.saveAdminEdit=async function(){
   const btn=document.getElementById('admin-save-btn');
   btn.classList.add('loading');btn.innerHTML='<div class="spin"></div>&nbsp;Salvando...';
   const data={};adminCtx.metrics.forEach(m=>{const el=document.getElementById('ae-'+m.key);data[m.key]=el?Math.max(0,parseInt(el.value)||0):0;});
-  await dbSet(adminCtx.name,adminCtx.day,data,adminCtx.metrics);
+  const _mk=adminCtx.mkey||dashMKey;
+  const _docKey=`${adminCtx.name}_${_mk}_${adminCtx.day}`;
+  if(db)await setDoc(doc(db,'curicica2_sdr_tracker',_docKey),data,{merge:true});
   btn.classList.remove('loading');btn.classList.add('saved');btn.textContent='✓ Corrigido!';
-  showToast('Dados corrigidos!','ok');
-  await loadPublicStatus();
+  playSound('save');showToast('Dados corrigidos!','ok');
   if(isAuth)await loadHomeResumo();
   setTimeout(()=>{btn.classList.remove('saved');btn.style.background='var(--red)';btn.textContent='Salvar correção';goTo('s-dash');dtab('edit');},2000);
 };
 
-// Efeito ripple
 document.addEventListener('click', e => {
   const el = e.target.closest('button, .profile-card, .day-cell:not(.future), .tab-btn');
   if (!el) return;
@@ -2267,6 +2428,31 @@ document.addEventListener('click', e => {
   setTimeout(() => dot.remove(), 450);
 }, { passive: true });
 
+let _actx = null;
+function _ac(){ if(!_actx)_actx=new(window.AudioContext||window.webkitAudioContext)(); return _actx; }
+function playSound(t){
+  try{
+    const ctx=_ac(), now=ctx.currentTime;
+    const mk=(freq,type,start,dur,vol,freqEnd)=>{
+      const o=ctx.createOscillator(),g=ctx.createGain();
+      o.connect(g);g.connect(ctx.destination);
+      o.type=type||'sine';o.frequency.setValueAtTime(freq,now+start);
+      if(freqEnd)o.frequency.exponentialRampToValueAtTime(freqEnd,now+start+dur);
+      g.gain.setValueAtTime(0,now+start);
+      g.gain.linearRampToValueAtTime(vol,now+start+0.01);
+      g.gain.exponentialRampToValueAtTime(0.001,now+start+dur);
+      o.start(now+start);o.stop(now+start+dur+0.02);
+    };
+    if(t==='click') mk(600,'sine',0,0.06,0.12,350);
+    if(t==='nav'){mk(250,'sine',0,0.08,0.07,500);mk(500,'sine',0.05,0.12,0.05);}
+    if(t==='back'){mk(450,'sine',0,0.08,0.07,200);}
+    if(t==='tab') mk(520,'sine',0,0.07,0.09,620);
+    if(t==='save'){mk(440,'sine',0,0.22,0.13);mk(660,'sine',0.1,0.25,0.13);mk(880,'sine',0.2,0.3,0.1);}
+    if(t==='error'){mk(200,'sawtooth',0,0.18,0.09,120);}
+    if(t==='month'){mk(380,'sine',0,0.05,0.1,480);mk(560,'sine',0.06,0.1,0.09);}
+  }catch(e){}
+}
+
 initFB();
 
 window.openMenu=function(){
@@ -2280,60 +2466,74 @@ window.closeMenu=function(){
   document.body.style.overflow='';
 };
 
-// ══════════════════════ STATUS PÚBLICO ══════════════════════
-// Verifica o DIA ANTERIOR — se não preencheu ontem, mostra Pendente
 async function loadPublicStatus(){
-  const map=[{1650
-  2288
-
-              // Dados históricos da planilha
-              const historicalData = {
-                'Caroline':{'2':{leads:0,agend:7,reag:0,comp:1,vend:0},'3':{leads:0,agend:2,reag:0,comp:2,vend:0},'4':{leads:0,agend:4,reag:0,comp:2,vend:0},'5':{leads:0,agend:2,reag:0,comp:2,vend:0},'6':{leads:0,agend:6,reag:0,comp:4,vend:0},'7':{leads:0,agend:1,reag:0,comp:0,vend:0},'8':{leads:0,agend:4,reag:0,comp:1,vend:0},'9':{leads:0,agend:2,reag:0,comp:0,vend:0},'10':{leads:0,agend:1,reag:0,comp:1,vend:0},'11':{leads:0,agend:6,reag:0,comp:1,vend:0},'12':{leads:0,agend:8,reag:0,comp:2,vend:0},'13':{leads:0,agend:4,reag:0,comp:0,vend:0}},'Duyane':{'14':{leads:0,agend:2,reag:0,comp:0,vend:0}}};
-              ,id:'pub-v'},{sdr:'Caroline',id:'pub-jq'},{sdr:'Jully',id:'pub-ju'}];
-  const checkDay = todayN > 1 ? todayN - 1 : null;
-
+  const map=[{sdr:'Caroline',id:'pub-car'},{sdr:'Jully',id:'pub-ju'}];
+  const yesterdayN = todayN - 1;
   for(const{sdr,id}of map){
     const card=document.getElementById(id);if(!card)continue;
     const lbl=card.querySelector('.pub-stat-lbl');
-
-    // Dia 1 do mês: não há ontem — mostra OK por padrão
-    if(!checkDay){
+    if(yesterdayN < 1){
       card.classList.remove('pending');card.classList.add('ok');
       if(lbl)lbl.textContent='OK ✓';
       continue;
     }
-
-    const data=await dbGet(sdr,checkDay);
-    if(data){
-      card.classList.remove('pending');card.classList.add('ok');
-      if(lbl)lbl.textContent='Preencheu ✓';
-    }else{
-      card.classList.remove('ok');card.classList.add('pending');
-      if(lbl)lbl.textContent='Pendente';
-    }
+    const data=await dbGet(sdr,yesterdayN);
+    if(data){card.classList.remove('pending');card.classList.add('ok');if(lbl)lbl.textContent='Preencheu ✓';}
+    else{card.classList.remove('ok');card.classList.add('pending');if(lbl)lbl.textContent='Pendente';}
   }
 }
 
-loadPublicStatus();
+const _origSaveDay=window.saveDay;
+window.saveDay=async function(){
+    await _origSaveDay();
+    await loadPublicStatus();
+    if(window.CUR&&CUR.name&&db){
+          const _n=new Date();
+          const _mk=_n.getFullYear()+'-'+String(_n.getMonth()+1).padStart(2,'0');
+          await new Promise(r=>setTimeout(r,500));
+          await recalcularSummary(CUR.name,_mk);
+          try{await loadHomeResumo();}catch(e){}
+    }
+};
+  const _origSaveEditDay=window.saveEditDay;
+  window.saveEditDay=async function(){
+      await _origSaveEditDay.call(this);
+      if(window.CUR&&CUR.name&&db){
+            const _n=new Date();
+            const _mk=_n.getFullYear()+'-'+String(_n.getMonth()+1).padStart(2,'0');
+            await new Promise(r=>setTimeout(r,500));
+            await recalcularSummary(CUR.name,_mk);
+            try{await loadHomeResumo();}catch(e){}
+      }
+  };
+  async function recalcularSummary(sdrName,mesKey){
+      if(!db)return;
+      const M=['agend','leads','comp','reag','vend'];
+      const s=Object.fromEntries(M.map(m=>[m,0]));
+      for(let d=1;d<=31;d++){
+            try{const snap=await getDoc(doc(db,'curicica2_sdr_tracker',sdrName+'_'+mesKey+'_'+d));if(snap.exists())M.forEach(m=>{s[m]+=(snap.data()[m]||0);});}
+            catch(e){}
+      }
+      const sk=sdrName+'_summary_'+mesKey;
+      try{await setDoc(doc(db,'curicica2_sdr_summary',sk),s);lsSet('loc_'+sk,JSON.stringify(s));lsSet('cur:loc_'+sdrName+'_summary_'+mesKey,JSON.stringify(s));}catch(e){console.error('recalcSummary',sdrName,e);}
+      return s;
+  }
+  window.recalcularTotais=async function(mes){
+      if(!db){showToast('Firebase nao conectado');return;}
+      if(!mes){const n=new Date();mes=n.getFullYear()+'-'+String(n.getMonth()+1).padStart(2,'0');}
+      showToast('Recalculando totais...');
+      for(const s of ['Caroline','Jully'])await recalcularSummary(s,mes);
+      showToast('Totais recalculados!');
+      try{await renderMes();}catch(e){}
+      try{await loadHomeResumo();}catch(e){}
+  };
+  const _origSAE=window.saveAdminEdit;
+  window.saveAdminEdit=async function(){
+      await _origSAE.call(this);
+      await window.recalcularTotais();
+  };
 
-// ══════════════════════ 3D TILT ══════════════════════
-function applyTilt(el){
-  el.classList.add('tilt-3d');
-  const shine=document.createElement('div');
-  shine.className='tilt-shine';
-  el.appendChild(shine);
-  el.addEventListener('mousemove',e=>{
-    const r=el.getBoundingClientRect();
-    const x=(e.clientX-r.left)/r.width -0.5;
-    const y=(e.clientY-r.top)/r.height -0.5;
-    el.style.transform=`perspective(600px) rotateX(${y*-14}deg) rotateY(${x*14}deg) scale3d(1.04,1.04,1.04)`;
-    shine.style.background=`radial-gradient(circle at ${(x+0.5)*100}% ${(y+0.5)*100}%, rgba(255,255,255,0.12) 0%, transparent 65%)`;
-  });
-  el.addEventListener('mouseleave',()=>{
-    el.style.transform='perspective(600px) rotateX(0deg) rotateY(0deg) scale3d(1,1,1)';
-  });
-}
-document.querySelectorAll('.pub-stat-card, .profile-card').forEach(applyTilt);
+loadPublicStatus();
 </script>
 </body>
 </html>
